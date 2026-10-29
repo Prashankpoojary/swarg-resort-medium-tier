@@ -3,6 +3,8 @@
 
 This is the elevated **Medium Tier** client demonstration package for **SWARG**, completely redesigned taking direct inspiration from the minimalist architectural aesthetic of **FORMA** (full-bleed room-by-room walkthrough, bold typographic restraint, and clean museum-grade spatial storytelling).
 
+🌐 **Live Demo**: [https://prashankpoojary.github.io/swarg-resort-medium-tier/](https://prashankpoojary.github.io/swarg-resort-medium-tier/)
+
 ---
 
 ## 🏛️ The FORMA-Inspired Architectural Experience
