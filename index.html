@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWARG — Himalayan Cloud Retreat | Architectural Luxury Sanctuary</title>
+  <meta name="description" content="Perched at 8,250 feet on the Annapurna Ridge. Minimalist architectural chalets, private geothermal baths, Michelin-caliber high-altitude gastronomy, and direct helipad access.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              850: '#141a29',
+              900: '#0e1320',
+              950: '#080b11',
+            },
+            mist: {
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+            },
+            snow: {
+              50: '#ffffff',
+              100: '#f8fafc',
+            }
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Architectural Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-950 text-snow-100 font-sans selection:bg-white selection:text-slate-950 antialiased overflow-x-hidden">
+
+  <!-- =======================================================================
+       1. LIVE HIMALAYAN ELEVATION & WEATHER TICKER
+       ======================================================================= -->
+  <div class="bg-slate-950 text-mist-400 text-xs tracking-wider border-b border-white/10 py-2 px-4 sm:px-8 relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-[11px] uppercase">
+      <div class="flex items-center space-x-6">
+        <span class="flex items-center space-x-2 text-white">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="tracking-widest font-medium">Himalayan Sanctuary · Annapurna South Ridge</span>
+        </span>
+        <span class="hidden md:inline-flex items-center space-x-1.5 text-mist-400">
+          <span>Elevation 8,250 FT / 2,514 M</span>
+        </span>
+        <span class="hidden sm:inline-flex items-center space-x-1.5 text-mist-400">
+          <span>-2°C Crisp / Clear Skies</span>
+        </span>
+      </div>
+      
+      <div class="flex items-center space-x-6">
+        <span class="flex items-center space-x-1.5 text-mist-300">
+          <span id="ticker-himalayan-time">--:-- NPT</span>
+        </span>
+        <span class="hidden lg:inline-flex items-center space-x-1 text-mist-400">
+          <span>Private Helipad:</span>
+          <span class="text-emerald-400 font-medium">Operational (ICAO ZSWG)</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       2. TOP NAVIGATION HEADER (FORMA INSPIRED: CLEAN & ARCHITECTURAL)
+       ======================================================================= -->
+  <header id="main-nav" class="fixed top-8 left-0 z-40 w-full transition-all duration-300 py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#" class="group flex items-center space-x-3 text-left">
+        <span class="font-display font-bold text-2xl tracking-[0.25em] uppercase text-white block">SWARG</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-[0.25em] text-mist-300 font-medium">
+        <a href="#spaces" class="hover:text-white transition-colors">The Spaces</a>
+        <a href="#sanctuary" class="hover:text-white transition-colors">Philosophy</a>
+        <a href="#suites" class="hover:text-white transition-colors">Residences</a>
+        <a href="#gastronomy" class="hover:text-white transition-colors">Terroir & Cellar</a>
+        <a href="#curator" class="hover:text-white transition-colors">Bespoke Curation</a>
+        <a href="#aviation" class="hover:text-white transition-colors">Aviation</a>
+      </nav>
+
+      <!-- Right Actions: Currency Selector + Category Tag + Reserve CTA -->
+      <div class="flex items-center space-x-3 sm:space-x-4">
+        
+        <!-- Category Badge -->
+        <div class="hidden sm:inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-white/10 text-[10px] uppercase tracking-widest text-mist-300">
+          <span>Sanctuary · 8,250 FT</span>
+          <span class="text-white">⊞</span>
+        </div>
+
+        <!-- Multi-Currency Selector Pills -->
+        <div class="flex items-center bg-slate-900/80 backdrop-blur-md p-1 rounded-full border border-white/10 text-xs">
+          <button data-currency="USD" class="currency-option px-2.5 py-1 rounded-full text-xs transition-all duration-200">USD</button>
+          <button data-currency="EUR" class="currency-option px-2.5 py-1 rounded-full text-xs transition-all duration-200">EUR</button>
+          <button data-currency="MVR" class="currency-option px-2.5 py-1 rounded-full text-xs transition-all duration-200">MVR</button>
+          <button data-currency="INR" class="currency-option px-2.5 py-1 rounded-full text-xs transition-all duration-200">INR</button>
+        </div>
+
+        <!-- Book CTA Button -->
+        <button onclick="openBookingModal()" class="hidden md:inline-flex btn-silver px-6 py-2 rounded-full text-xs uppercase tracking-widest font-semibold">
+          Reserve
+        </button>
+
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" class="lg:hidden text-white p-2 rounded-lg hover:bg-slate-800 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden glass-panel mt-3 rounded-2xl p-6 border border-white/10">
+      <div class="flex flex-col space-y-4 text-xs uppercase tracking-widest font-light text-mist-300">
+        <a href="#spaces" class="hover:text-white py-1">The Spaces</a>
+        <a href="#sanctuary" class="hover:text-white py-1">Philosophy</a>
+        <a href="#suites" class="hover:text-white py-1">Residences</a>
+        <a href="#gastronomy" class="hover:text-white py-1">Terroir & Cellar</a>
+        <a href="#curator" class="hover:text-white py-1">Bespoke Curation</a>
+        <a href="#aviation" class="hover:text-white py-1">Aviation</a>
+        <div class="pt-4 border-t border-white/10">
+          <button onclick="openBookingModal()" class="w-full btn-silver py-3 rounded-full text-center text-xs uppercase tracking-widest font-semibold">
+            Reserve Your Residency
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =======================================================================
+       3. FORMA-INSPIRED HERO: FULL-BLEED ARCHITECTURAL ROOM WALKTHROUGH
+       ======================================================================= -->
+  <section id="spaces" class="relative w-full h-screen min-h-[720px] overflow-hidden flex flex-col justify-between">
+    
+    <!-- Slides Background Container (Dynamic from app.js) -->
+    <div id="walkthrough-slides-container" class="absolute inset-0 z-0"></div>
+
+    <!-- Top Space for Fixed Header -->
+    <div class="h-28"></div>
+
+    <!-- Main Architectural Overlay Content (FORMA Style) -->
+    <div class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-8 pb-12">
+      <div class="max-w-2xl text-left">
+        
+        <!-- Category & Room Index Tag -->
+        <div id="hero-room-index" class="text-xs uppercase tracking-[0.35em] text-white/80 font-medium mb-3">
+          01 / LIVING
+        </div>
+
+        <!-- Huge Architectural Headline -->
+        <h1 class="text-5xl sm:text-7xl lg:text-8xl font-display font-bold text-white tracking-tight leading-[0.93] mb-4">
+          <span id="hero-room-title-1" class="block">THE LIVING</span>
+          <span id="hero-room-title-2" class="block">SPACE</span>
+        </h1>
+
+        <!-- Poetic Tagline -->
+        <div id="hero-room-subtitle" class="text-xs uppercase tracking-[0.35em] text-white/90 font-light mb-4">
+          WHERE THE DAY GATHERS.
+        </div>
+
+        <!-- Description -->
+        <p id="hero-room-desc" class="text-mist-300 text-xs sm:text-sm font-light leading-relaxed max-w-lg mb-8">
+          Cantilevered stone salon with floor-to-ceiling structural glass overlooking the Annapurna valley mist.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex items-center space-x-4">
+          <button onclick="openBookingModal('chalet')" class="btn-silver px-7 py-3 rounded-full text-xs uppercase tracking-widest font-semibold">
+            Inquire Stay
+          </button>
+          <button data-open-suite="chalet" class="btn-ghost-silver px-6 py-3 rounded-full text-xs uppercase tracking-widest font-light">
+            View CAD Specs
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Architectural Controls & Progress Bar -->
+    <div class="relative z-20 w-full px-4 sm:px-8 pb-4">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 mb-3">
+        
+        <!-- Room Selector Pills -->
+        <div id="walkthrough-pills" class="flex flex-wrap items-center gap-1.5 sm:gap-2"></div>
+
+        <!-- Prev / Next Slider Arrows -->
+        <div class="flex items-center space-x-2 text-xs uppercase tracking-widest text-mist-400">
+          <button onclick="prevSlide()" class="p-2 rounded-full hover:text-white hover:bg-white/10 transition-colors" title="Previous Room">
+            ← PREV
+          </button>
+          <span class="text-white/20">|</span>
+          <button onclick="nextSlide()" class="p-2 rounded-full hover:text-white hover:bg-white/10 transition-colors" title="Next Room">
+            NEXT →
+          </button>
+        </div>
+      </div>
+
+      <!-- Thin Bottom Progress Bar (FORMA Style) -->
+      <div class="max-w-7xl mx-auto progress-bar-track rounded-full">
+        <div id="walkthrough-progress" class="progress-bar-fill" style="width: 16.66%;"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =======================================================================
+       4. THE SANCTUARY PHILOSOPHY (ARCHITECTURAL REST-ETHOS)
+       ======================================================================= -->
+  <section id="sanctuary" class="py-28 px-4 sm:px-8 border-t border-white/10 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Column: Editorial Copy -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs uppercase tracking-[0.3em] text-mist-400 font-medium block">The Philosophy of Swarg</span>
+          
+          <h2 class="font-display text-4xl sm:text-5xl font-light text-white leading-tight">
+            Where silence is <br>
+            <span class="italic font-serif">the ultimate luxury</span>.
+          </h2>
+
+          <p class="text-mist-300 text-sm sm:text-base font-light leading-relaxed">
+            Named after the Sanskrit realm of the divine heavens, <strong class="text-white font-normal">Swarg</strong> was conceived as an architectural tribute to the raw power of the Himalayas. Suspended between mist and cloud tops at 8,250 feet, this is where time gently decelerates.
+          </p>
+
+          <p class="text-mist-400 text-xs sm:text-sm font-light leading-relaxed">
+            Constructed using reclaimed local slate, hand-cut stone, and aromatic Himalayan cedar, each dwelling is acoustically sealed and positioned for optimal panoramic alignment with the high peaks.
+          </p>
+
+          <!-- Key Metrics -->
+          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-white/10">
+            <div>
+              <div class="font-display text-3xl sm:text-4xl text-white font-light">12</div>
+              <div class="text-[10px] uppercase tracking-widest text-mist-400 mt-1">Exclusive Chalets</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl sm:text-4xl text-white font-light">8,250'</div>
+              <div class="text-[10px] uppercase tracking-widest text-mist-400 mt-1">Valley Altitude</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl sm:text-4xl text-white font-light">1:1</div>
+              <div class="text-[10px] uppercase tracking-widest text-mist-400 mt-1">Sherpa Butler Ratio</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Composition with Dual Images -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
+          
+          <div class="img-zoom-container rounded-2xl overflow-hidden glass-card h-[400px] sm:h-[480px]">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80" 
+                 alt="Luxury Alpine Architecture" 
+                 class="w-full h-full object-cover">
+          </div>
+
+          <div class="img-zoom-container rounded-2xl overflow-hidden glass-card h-[400px] sm:h-[480px] sm:translate-y-10">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80" 
+                 alt="Infinity Thermal Pool at Sunset" 
+                 class="w-full h-full object-cover">
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       5. SIGNATURE RESIDENCES (CLEAN EDITORIAL ARCHITECTURE)
+       ======================================================================= -->
+  <section id="suites" class="py-28 px-4 sm:px-8 bg-slate-950/60 border-t border-white/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-[0.3em] text-mist-400 font-medium block mb-2">Accommodations</span>
+          <h2 class="font-display text-4xl sm:text-5xl font-light text-white leading-tight">
+            Signature Suites & <span class="italic font-serif">Private Chalets</span>
+          </h2>
+        </div>
+        <div class="flex items-center space-x-3 text-xs text-mist-400">
+          <span>Live pricing presented in:</span>
+          <span class="currency-label px-3 py-1 rounded-full bg-slate-800 text-white font-medium border border-white/15">USD</span>
+        </div>
+      </div>
+
+      <!-- Suites Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- CARD 1: The Cloudline Chalet -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80" 
+                 alt="The Cloudline Chalet" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase tracking-widest text-mist-200 border border-white/10">
+              1,250 sq.ft · 2 Guests
+            </div>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between mb-2">
+                <h3 class="font-display text-2xl text-white font-medium">The Cloudline Chalet</h3>
+              </div>
+              <p class="text-mist-400 text-xs font-light leading-relaxed mb-4">
+                Cantilevered cedar timber villa with double-sided stone hearth, outdoor cedar soaking tub, and uninterrupted glacier vistas.
+              </p>
+
+              <!-- Highlights list -->
+              <div class="space-y-1.5 mb-6 text-xs text-mist-300 font-light">
+                <div class="flex items-center space-x-2">
+                  <span class="w-1 h-1 rounded-full bg-white"></span>
+                  <span>Panoramic floor-to-ceiling glass</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="w-1 h-1 rounded-full bg-white"></span>
+                  <span>Dedicated personal Sherpa butler</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-4 border-t border-white/10">
+              <div class="flex items-baseline justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-widest text-mist-400">Nightly Rate</span>
+                <div>
+                  <span data-suite-price="chalet" class="font-display text-2xl text-white font-medium">$850</span>
+                  <span class="text-xs text-mist-400 font-light"> / night</span>
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-3">
+                <button data-open-suite="chalet" class="btn-ghost-silver py-2.5 rounded-xl text-xs uppercase tracking-wider text-center">
+                  CAD Details
+                </button>
+                <button data-quick-book="chalet" class="btn-silver py-2.5 rounded-xl text-xs uppercase tracking-wider text-center">
+                  Reserve
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: The Celestial Glass Villa -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-white/30 relative">
+          <!-- Featured Badge -->
+          <div class="absolute top-3 right-3 z-20 bg-white text-slate-900 px-3 py-0.5 rounded-full text-[10px] uppercase tracking-widest font-semibold shadow-lg">
+            Featured Residence
+          </div>
+
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" 
+                 alt="The Celestial Glass Villa" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase tracking-widest text-mist-200 border border-white/10">
+              2,600 sq.ft · 4 Guests
+            </div>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between mb-2">
+                <h3 class="font-display text-2xl text-white font-medium">The Celestial Glass Villa</h3>
+              </div>
+              <p class="text-mist-400 text-xs font-light leading-relaxed mb-4">
+                Dual-level architectural masterpiece with heated 38°C outdoor plunge pool, private sauna, and retractable glass ceiling for midnight stargazing.
+              </p>
+
+              <!-- Highlights list -->
+              <div class="space-y-1.5 mb-6 text-xs text-mist-300 font-light">
+                <div class="flex items-center space-x-2">
+                  <span class="w-1 h-1 rounded-full bg-white"></span>
+                  <span>Private heated infinity plunge pool</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="w-1 h-1 rounded-full bg-white"></span>
+                  <span>Round-trip helicopter transfer included</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-4 border-t border-white/10">
+              <div class="flex items-baseline justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-widest text-mist-400">Nightly Rate</span>
+                <div>
+                  <span data-suite-price="villa" class="font-display text-2xl text-white font-medium">$1,450</span>
+                  <span class="text-xs text-mist-400 font-light"> / night</span>
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-3">
+                <button data-open-suite="villa" class="btn-ghost-silver py-2.5 rounded-xl text-xs uppercase tracking-wider text-center">
+                  CAD Details
+                </button>
+                <button data-quick-book="villa" class="btn-silver py-2.5 rounded-xl text-xs uppercase tracking-wider text-center">
+                  Reserve
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: The Sanctuary Summit Penthouse -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="relative h-64 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=900&q=80" 
+                 alt="The Sanctuary Summit Penthouse" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] uppercase tracking-widest text-mist-200 border border-white/10">
+              4,100 sq.ft · 6 Guests
+            </div>
+          </div>
+          
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-baseline justify-between mb-2">
+                <h3 class="font-display text-2xl text-white font-medium">The Summit Penthouse</h3>
+              </div>
+              <p class="text-mist-400 text-xs font-light leading-relaxed mb-4">
+                The apex of Himalayan seclusion. Crowning the highest ridge with private helipad gate access, private sound bath studio, and executive chef team.
+              </p>
+
+              <!-- Highlights list -->
+              <div class="space-y-1.5 mb-6 text-xs text-mist-300 font-light">
+                <div class="flex items-center space-x-2">
+                  <span class="w-1 h-1 rounded-full bg-white"></span>
+                  <span>Full floor seclusion & direct helipad arrival</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <span class="w-1 h-1 rounded-full bg-white"></span>
+                  <span>Personal executive chef & wine sommelier</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="pt-4 border-t border-white/10">
+              <div class="flex items-baseline justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-widest text-mist-400">Nightly Rate</span>
+                <div>
+                  <span data-suite-price="penthouse" class="font-display text-2xl text-white font-medium">$2,200</span>
+                  <span class="text-xs text-mist-400 font-light"> / night</span>
+                </div>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-3">
+                <button data-open-suite="penthouse" class="btn-ghost-silver py-2.5 rounded-xl text-xs uppercase tracking-wider text-center">
+                  CAD Details
+                </button>
+                <button data-quick-book="penthouse" class="btn-silver py-2.5 rounded-xl text-xs uppercase tracking-wider text-center">
+                  Reserve
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       6. ALPINE GASTRONOMY & SOMMELIER CELLAR (TABBED EXPLORER)
+       ======================================================================= -->
+  <section id="gastronomy" class="py-28 px-4 sm:px-8 border-t border-white/10 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.3em] text-mist-400 font-medium block mb-3">Culinary Haute Couture</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-light text-white leading-tight mb-4">
+          Alpine Gastronomy & <br>
+          <span class="italic font-serif">Subterranean Cellars</span>
+        </h2>
+        <p class="text-mist-300 text-sm sm:text-base font-light leading-relaxed">
+          Culinary artistry celebrating organic high-altitude produce, wild Himalayan morels, and rare glacier-foraged herbs, curated by Michelin-decorated masters.
+        </p>
+        
+        <!-- Interactive Dining Concept Switcher Tabs -->
+        <div class="mt-8 inline-flex items-center bg-slate-900/80 p-1.5 rounded-full border border-white/15 text-xs">
+          <button data-dining-tab="summit" class="dining-tab-btn px-5 py-2 rounded-full font-semibold bg-white text-slate-900 transition-all">The Summit Haute Degustation</button>
+          <button data-dining-tab="hearth" class="dining-tab-btn px-5 py-2 rounded-full text-mist-400 hover:text-white transition-all">Frost & Flame Open Hearth</button>
+          <button data-dining-tab="cellar" class="dining-tab-btn px-5 py-2 rounded-full text-mist-400 hover:text-white transition-all">Grand Cru Sommelier Cellar</button>
+        </div>
+      </div>
+
+      <!-- Tab Panel 1: The Summit -->
+      <div id="dining-panel-summit" class="dining-content-panel grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden glass-card h-[440px]">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="The Summit Fine Dining" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs uppercase tracking-[0.25em] text-mist-400">9-Course Alpine Experience</span>
+          <h3 class="font-display text-3xl sm:text-4xl text-white font-light">The Summit Cantilevered Salon</h3>
+          <p class="text-mist-300 text-sm font-light leading-relaxed">
+            Perched over a precipitous 8,000-foot drop, Executive Chef Tenzing Norbu presents an exquisite multi-course journey marrying French classical haute cuisine techniques with indigenous Himalayan produce.
+          </p>
+          <div class="space-y-3 border-t border-white/10 pt-4 text-xs text-mist-300 font-light">
+            <div class="flex items-start space-x-3">
+              <span class="text-white font-medium">• First Course:</span>
+              <span>Chilled Himalayan river trout crudo with fermented green juniper berry oil</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="text-white font-medium">• Main Entrée:</span>
+              <span>Slow-braised mountain venison, wild morel foam, and roasted alpine root puree</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="text-white font-medium">• Grand Finale:</span>
+              <span>Wild rhododendron petal sorbet with smoked cedarwood blossom honey</span>
+            </div>
+          </div>
+          <div class="pt-2 text-xs text-mist-400">Dinner Service: 19:00 — 23:00 · Dress Code: Alpine Black Tie Optional</div>
+        </div>
+      </div>
+
+      <!-- Tab Panel 2: Frost & Flame -->
+      <div id="dining-panel-hearth" class="dining-content-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden glass-card h-[440px]">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Frost & Flame Starlit Grill" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs uppercase tracking-[0.25em] text-mist-400">Open-Fire Alpine Hearth</span>
+          <h3 class="font-display text-3xl sm:text-4xl text-white font-light">Frost & Flame Sunken Pits</h3>
+          <p class="text-mist-300 text-sm font-light leading-relaxed">
+            Private sunken granite fire-pits surrounded by snowbanks under the pristine Himalayan night sky. Savor A5 Japanese Wagyu and high-altitude Himalayan yak beef seared over fragrant cedar and applewood coals.
+          </p>
+          <div class="space-y-3 border-t border-white/10 pt-4 text-xs text-mist-300 font-light">
+            <div class="flex items-start space-x-3">
+              <span class="text-white font-medium">• Grill Selection:</span>
+              <span>Prime cut yak striploin marinated in black cardamom & glacier salt</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="text-white font-medium">• Fireside Sides:</span>
+              <span>Charred alpine tubers with whipped yak butter and black truffle emulsion</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="text-white font-medium">• Digestif:</span>
+              <span>Warm spiced spiced apple cider distilled with mountain botanicals</span>
+            </div>
+          </div>
+          <div class="pt-2 text-xs text-mist-400">Fireside Dining: 18:00 — Late · By Prior Concierge Reservation</div>
+        </div>
+      </div>
+
+      <!-- Tab Panel 3: Sommelier Cellar -->
+      <div id="dining-panel-cellar" class="dining-content-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden glass-card h-[440px]">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1200&q=80" alt="Subterranean Wine Cellar" class="w-full h-full object-cover">
+        </div>
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs uppercase tracking-[0.25em] text-mist-400">1,400+ Grand Cru Labels</span>
+          <h3 class="font-display text-3xl sm:text-4xl text-white font-light">The High-Altitude Sommelier Vault</h3>
+          <p class="text-mist-300 text-sm font-light leading-relaxed">
+            Carved directly into the mountain bedrock at 8,250 feet, our natural climate-regulated stone cellar safeguards one of the world's most distinguished private collections of vintage Bordeaux, Burgundy, and biodynamic alpine gems.
+          </p>
+          <div class="space-y-3 border-t border-white/10 pt-4 text-xs text-mist-300 font-light">
+            <div class="flex items-start space-x-3">
+              <span class="text-white font-medium">• Rare Vintages:</span>
+              <span>Verticals of Château Margaux, Romanée-Conti, and rare Swiss Valais reserves</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="text-white font-medium">• Private Tastings:</span>
+              <span>Conducted nightly by Head Sommelier Jean-Luc Dupuis inside the granite vault</span>
+            </div>
+            <div class="flex items-start space-x-3">
+              <span class="text-white font-medium">• Bespoke Stocking:</span>
+              <span>Preferred vintages cellared directly in your chalet prior to helicopter touchdown</span>
+            </div>
+          </div>
+          <div class="pt-2 text-xs text-mist-400">Private Tastings: By Appointment · Satellite In-Suite Cellar Stocking Available</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       7. BESPOKE STAY & EXPERIENCE CURATION ENGINE (INTERACTIVE LUXURY FEATURE)
+       ======================================================================= -->
+  <section id="curator" class="py-28 px-4 sm:px-8 border-t border-white/10 relative">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.3em] text-mist-400 font-medium block mb-2">Bespoke Curation</span>
+        <h2 class="font-display text-4xl sm:text-5xl font-light text-white leading-tight mb-4">
+          Curate Your Alpine Residency
+        </h2>
+        <p class="text-mist-300 text-sm sm:text-base font-light leading-relaxed">
+          Tailor every dimension of your Himalayan stay prior to arrival. Select your flight approach, private dining experiences, and restorative wellness journeys.
+        </p>
+      </div>
+
+      <!-- Curation Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-12">
+        
+        <!-- Category 1: Arrival Flight -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="text-[10px] uppercase tracking-widest text-mist-400 mb-2">01 // Arrival Protocol</div>
+            <h4 class="font-display text-xl text-white mb-4">Aviation Routing</h4>
+            
+            <div class="space-y-3">
+              <div onclick="selectCuratorOption('arrival', 'heli_ktm')" data-curator-cat="arrival" data-curator-key="heli_ktm" class="curate-card selected p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">Heli from Kathmandu</span>
+                  <span class="check-indicator text-emerald-400 text-xs">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">28 min private charter</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="heli_ktm">$1,200</div>
+              </div>
+
+              <div onclick="selectCuratorOption('arrival', 'heli_pkr')" data-curator-cat="arrival" data-curator-key="heli_pkr" class="curate-card p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">Heli from Pokhara</span>
+                  <span class="check-indicator text-emerald-400 text-xs opacity-0">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">14 min scenic route</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="heli_pkr">$800</div>
+              </div>
+
+              <div onclick="selectCuratorOption('arrival', 'rover')" data-curator-cat="arrival" data-curator-key="rover" class="curate-card p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">VIP Alpine Rover</span>
+                  <span class="check-indicator text-emerald-400 text-xs opacity-0">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">Mountain chauffeur escort</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="rover">Complimentary</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Culinary Curation -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="text-[10px] uppercase tracking-widest text-mist-400 mb-2">02 // Culinary Program</div>
+            <h4 class="font-display text-xl text-white mb-4">Haute Gastronomy</h4>
+            
+            <div class="space-y-3">
+              <div onclick="selectCuratorOption('dining', 'degustation')" data-curator-cat="dining" data-curator-key="degustation" class="curate-card selected p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">9-Course Degustation</span>
+                  <span class="check-indicator text-emerald-400 text-xs">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">Paired with rare Grand Crus</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="degustation">$320</div>
+              </div>
+
+              <div onclick="selectCuratorOption('dining', 'hearth')" data-curator-cat="dining" data-curator-key="hearth" class="curate-card p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">Frost & Flame Wagyu</span>
+                  <span class="check-indicator text-emerald-400 text-xs opacity-0">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">Sunken pit cedarwood roast</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="hearth">$220</div>
+              </div>
+
+              <div onclick="selectCuratorOption('dining', 'dining_none')" data-curator-cat="dining" data-curator-key="dining_none" class="curate-card p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">A La Carte In-Suite</span>
+                  <span class="check-indicator text-emerald-400 text-xs opacity-0">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">Flexible private butler service</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="dining_none">Complimentary</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Restorative Wellness -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="text-[10px] uppercase tracking-widest text-mist-400 mb-2">03 // Restorative Healing</div>
+            <h4 class="font-display text-xl text-white mb-4">Thermal & Sound</h4>
+            
+            <div class="space-y-3">
+              <div onclick="selectCuratorOption('wellness', 'sound_soak')" data-curator-cat="wellness" data-curator-key="sound_soak" class="curate-card selected p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">432 Hz Sound & Soak</span>
+                  <span class="check-indicator text-emerald-400 text-xs">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">Acoustic bowls & geothermal soak</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="sound_soak">$280</div>
+              </div>
+
+              <div onclick="selectCuratorOption('wellness', 'ayurveda')" data-curator-cat="wellness" data-curator-key="ayurveda" class="curate-card p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">Vedic Alpine Herbal Therapy</span>
+                  <span class="check-indicator text-emerald-400 text-xs opacity-0">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">Wild rhodiola & cedar massage</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="ayurveda">$190</div>
+              </div>
+
+              <div onclick="selectCuratorOption('wellness', 'wellness_none')" data-curator-cat="wellness" data-curator-key="wellness_none" class="curate-card p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">Self-Guided Infinity Pool</span>
+                  <span class="check-indicator text-emerald-400 text-xs opacity-0">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">38°C heated horizon access</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="wellness_none">Complimentary</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Alpine Expedition -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="text-[10px] uppercase tracking-widest text-mist-400 mb-2">04 // High-Altitude Wonder</div>
+            <h4 class="font-display text-xl text-white mb-4">Curated Expedition</h4>
+            
+            <div class="space-y-3">
+              <div onclick="selectCuratorOption('expedition', 'glacier_picnic')" data-curator-cat="expedition" data-curator-key="glacier_picnic" class="curate-card selected p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">Heli-Glacier Champagne</span>
+                  <span class="check-indicator text-emerald-400 text-xs">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">Private landing on virgin ridge</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="glacier_picnic">$750</div>
+              </div>
+
+              <div onclick="selectCuratorOption('expedition', 'star_trek')" data-curator-cat="expedition" data-curator-key="star_trek" class="curate-card p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">Nocturnal Stargazing</span>
+                  <span class="check-indicator text-emerald-400 text-xs opacity-0">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">Astrophysicist optics session</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="star_trek">$180</div>
+              </div>
+
+              <div onclick="selectCuratorOption('expedition', 'expedition_none')" data-curator-cat="expedition" data-curator-key="expedition_none" class="curate-card p-3 rounded-xl border border-white/20 text-xs">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-white font-medium">Chalet Hearth Leisure</span>
+                  <span class="check-indicator text-emerald-400 text-xs opacity-0">✓</span>
+                </div>
+                <div class="text-[11px] text-mist-400">Unhurried private sanctuary time</div>
+                <div class="text-xs text-white font-mono mt-1" data-curator-price-key="expedition_none">Complimentary</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Curator Bottom Action Strip -->
+      <div class="glass-panel p-6 rounded-2xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <span class="text-[10px] uppercase tracking-widest text-mist-400 block">Curated Add-Ons Total</span>
+          <div class="font-display text-3xl text-white font-medium" id="curator-total-amount">$2,550</div>
+          <span class="text-[11px] text-mist-400 font-light">Calculated in real-time in selected currency</span>
+        </div>
+        <button onclick="transferCuratorToBooking()" class="btn-silver px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold shadow-lg">
+          Transfer Curated Itinerary to Reservation
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       8. PRIVATE AVIATION & HELIPAD LOGISTICS DESK (EXCLUSIVE SECTION)
+       ======================================================================= -->
+  <section id="aviation" class="py-28 px-4 sm:px-8 bg-slate-950/70 border-t border-white/10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs uppercase tracking-[0.3em] text-mist-400 font-medium block">Aviation & Helipad Protocol</span>
+          <h2 class="font-display text-4xl sm:text-5xl font-light text-white leading-tight">
+            Direct Helipad Access <br>
+            <span class="italic font-serif">ICAO Code: ZSWG</span>
+          </h2>
+          <p class="text-mist-300 text-sm sm:text-base font-light leading-relaxed">
+            Perched atop our private ridgeline at 8,250 feet, Swarg features an illuminated all-weather twin-turbine helipad allowing discrete diplomatic and VIP arrivals directly from international and regional hubs.
+          </p>
+
+          <!-- Interactive Route Selector -->
+          <div class="space-y-3 pt-2">
+            <span class="text-[10px] uppercase tracking-widest text-mist-400 block font-medium">Select Flight Corridor:</span>
+            <div class="flex flex-wrap gap-2">
+              <button data-route="ktm" class="aviation-btn px-4 py-2 rounded-full text-xs font-semibold bg-white text-slate-900 transition-all">From Kathmandu</button>
+              <button data-route="pkr" class="aviation-btn px-4 py-2 rounded-full text-xs text-mist-400 hover:text-white border border-white/10 transition-all">From Pokhara</button>
+              <button data-route="del" class="aviation-btn px-4 py-2 rounded-full text-xs text-mist-400 hover:text-white border border-white/10 transition-all">From New Delhi (Jet + Heli)</button>
+            </div>
+          </div>
+
+          <!-- Dynamic Logistics Card -->
+          <div class="glass-panel p-5 rounded-2xl border border-white/10 space-y-2.5 text-xs">
+            <div class="flex justify-between border-b border-white/10 pb-2">
+              <span class="text-mist-400">Departure Hub:</span>
+              <span id="aviation-origin" class="text-white font-medium">Tribhuvan Int. Airport (Kathmandu)</span>
+            </div>
+            <div class="flex justify-between border-b border-white/10 pb-2">
+              <span class="text-mist-400">Flight Duration:</span>
+              <span id="aviation-duration" class="text-emerald-400 font-medium">28 Minutes</span>
+            </div>
+            <div class="flex justify-between border-b border-white/10 pb-2">
+              <span class="text-mist-400">Approved Aircraft:</span>
+              <span id="aviation-aircraft" class="text-white font-medium">Airbus H125 / Bell 407 Twin-Turbine</span>
+            </div>
+            <div class="flex justify-between border-b border-white/10 pb-2">
+              <span class="text-mist-400">Elevation Corridor:</span>
+              <span id="aviation-elevation" class="text-white font-medium">+4,500 FT Direct Ridgeline Approach</span>
+            </div>
+            <div class="pt-1">
+              <span class="text-mist-400 block mb-1">VIP Protocol:</span>
+              <p id="aviation-protocol" class="text-mist-300 font-light leading-relaxed">VIP Terminal Escort, Private Customs & Direct Helipad Landing</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl overflow-hidden relative h-[480px]">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80" alt="Private Helipad on Mountain Ridge" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 glass-panel p-4 rounded-xl border border-white/20 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] uppercase tracking-widest text-mist-300 block">Helipad Coordinates</span>
+                <span class="font-mono text-sm text-white">28°35'N, 83°57'E · Elevation 8,250 FT</span>
+              </div>
+              <span class="text-xs uppercase tracking-widest text-emerald-400 bg-slate-900/80 px-3 py-1 rounded-full border border-emerald-400/30 font-medium">
+                Radio: 122.80 MHz
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       9. CLIENT TESTIMONIALS & CALL TO ACTION
+       ======================================================================= -->
+  <section class="py-24 px-4 sm:px-8 border-t border-white/10 bg-slate-950/40">
+    <div class="max-w-5xl mx-auto text-center">
+      <span class="text-xs uppercase tracking-[0.3em] text-mist-400 font-medium mb-3 block">Diplomatic Endorsements</span>
+      <h3 class="font-display text-3xl sm:text-4xl text-white uppercase font-light mb-12">
+        Echoes from the Sanctuary
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <div class="glass-panel p-8 rounded-2xl border border-white/10">
+          <div class="flex text-mist-300 mb-3 text-xs tracking-widest">★★★★★</div>
+          <p class="font-serif text-lg text-snow-100 font-light italic mb-4 leading-relaxed">
+            "Arriving by private helicopter at dusk and stepping into the cantilevered cedar hot tub while snowflakes fell across the Annapurna valley was the most surreal luxury experience of my life."
+          </p>
+          <div class="text-xs text-mist-400 font-medium tracking-wider uppercase">
+            Lord Alistair Vance · <span class="text-mist-500">London & Zurich</span>
+          </div>
+        </div>
+
+        <div class="glass-panel p-8 rounded-2xl border border-white/10">
+          <div class="flex text-mist-300 mb-3 text-xs tracking-widest">★★★★★</div>
+          <p class="font-serif text-lg text-snow-100 font-light italic mb-4 leading-relaxed">
+            "The 432 Hz crystal sound baths combined with Chef Norbu's foraged degustation make Swarg not merely a mountain lodge, but a profound sensory rejuvenation."
+          </p>
+          <div class="text-xs text-mist-400 font-medium tracking-wider uppercase">
+            Elena Rostova · <span class="text-mist-500">Architectural Digest Curator</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-4 sm:px-8 relative overflow-hidden border-t border-white/10">
+    <div class="max-w-5xl mx-auto glass-panel p-10 sm:p-16 rounded-3xl text-center relative z-10 silver-border-glow">
+      <span class="text-xs uppercase tracking-[0.3em] text-mist-400 font-medium block mb-3">Begin Your Ascent</span>
+      <h2 class="font-display text-4xl sm:text-6xl text-white font-light mb-6">
+        Reserve Your Realm <br>
+        <span class="italic font-serif">Above the World</span>
+      </h2>
+      <p class="max-w-xl mx-auto text-mist-300 text-sm sm:text-base font-light leading-relaxed mb-10">
+        Due to our intimate scale of just 12 private residences, advance reservation is recommended. Our foreign diplomatic concierge is available around the clock.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="openBookingModal()" class="w-full sm:w-auto btn-silver px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold">
+          Check Immediate Availability
+        </button>
+        <a href="#suites" class="w-full sm:w-auto btn-ghost-silver px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-light text-center">
+          Compare Residences
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       10. FOOTER
+       ======================================================================= -->
+  <footer class="bg-slate-950 text-mist-400 py-16 px-4 sm:px-8 border-t border-white/10 text-xs font-light">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+      
+      <div class="space-y-4">
+        <span class="font-display font-bold text-xl tracking-[0.25em] text-white block">SWARG</span>
+        <p class="text-mist-400 text-xs leading-relaxed">
+          The Himalayan Cloud Retreat<br>
+          Latitude 28°35'N · Longitude 83°57'E<br>
+          Elevation: 8,250 FT / 2,514 M
+        </p>
+        <div class="text-white text-[11px] font-medium tracking-wider uppercase">
+          Private Helipad: ICAO ZSWG
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-white uppercase tracking-widest text-[11px] font-medium">Diplomatic & VIP Concierge</h4>
+        <p class="leading-relaxed">Direct Line: +977 (01) 429-SWARG</p>
+        <p class="leading-relaxed">Satellite: +870 773 912 400</p>
+        <p class="leading-relaxed">Email: sanctuary@swarg-retreat.com</p>
+        <p class="leading-relaxed">Secure PGP Key available on request</p>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="text-white uppercase tracking-widest text-[11px] font-medium mb-3">Retreat Exploration</h4>
+        <div><a href="#spaces" class="hover:text-white transition-colors">The Architectural Spaces</a></div>
+        <div><a href="#sanctuary" class="hover:text-white transition-colors">The Sanctuary Ethos</a></div>
+        <div><a href="#suites" class="hover:text-white transition-colors">Cloudline Chalets & Penthouses</a></div>
+        <div><a href="#gastronomy" class="hover:text-white transition-colors">The Summit Michelin Tasting</a></div>
+        <div><a href="#curator" class="hover:text-white transition-colors">Bespoke Curation</a></div>
+        <div><a href="#aviation" class="hover:text-white transition-colors">Private Aviation Desk</a></div>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-white uppercase tracking-widest text-[11px] font-medium">Global Representation</h4>
+        <p class="leading-relaxed">Geneva · London · Dubai · New York</p>
+        <p class="text-[11px] text-mist-500 leading-relaxed pt-2">
+          Currencies accepted: USD, EUR, MVR, INR, GBP, CHF. Private charter and jet clearance handled via our aviation desk.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-mist-500 text-[11px]">
+      <div>
+        © 2026 SWARG Himalayan Cloud Retreat. All Rights Reserved. Exemplary luxury demonstration.
+      </div>
+      <div class="flex space-x-6">
+        <a href="#" class="hover:text-mist-300">Privacy Policy</a>
+        <a href="#" class="hover:text-mist-300">Aviation Protocols</a>
+        <a href="#" class="hover:text-mist-300">Guest Confidentiality</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================================================================
+       MODAL 1: ELEVATED SUITE ARCHITECTURAL INSPECTOR (GALLERY & CAD BLUEPRINT)
+       ======================================================================= -->
+  <div id="suite-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
+    <div class="glass-panel w-full max-w-4xl rounded-3xl overflow-hidden border border-white/20 max-h-[92vh] flex flex-col shadow-2xl">
+      
+      <!-- Top Modal Navigation Strip -->
+      <div class="px-6 py-4 bg-slate-950/90 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <span id="modal-suite-view" class="text-[10px] uppercase tracking-widest text-mist-300 bg-slate-900/90 px-3 py-1 rounded-full border border-white/10">View</span>
+          <h3 id="modal-suite-title" class="font-display text-2xl sm:text-3xl text-white font-light">Suite Title</h3>
+        </div>
+
+        <div class="flex items-center space-x-3">
+          <div class="flex items-center bg-slate-900/90 p-1 rounded-full border border-white/10 text-xs">
+            <button data-tab="gallery" class="suite-tab-btn tab-pill active px-3.5 py-1 rounded-full text-xs">Photography</button>
+            <button data-tab="blueprint" class="suite-tab-btn tab-pill px-3.5 py-1 rounded-full text-xs">CAD Blueprint</button>
+          </div>
+
+          <button onclick="closeSuiteModal()" class="w-8 h-8 rounded-full bg-slate-900 border border-white/20 text-white flex items-center justify-center hover:bg-white hover:text-slate-900 transition-colors">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="overflow-y-auto flex-1 p-6 space-y-6">
+        
+        <!-- View 1: Photography & Lighting Switcher -->
+        <div id="modal-view-gallery" class="space-y-4">
+          <div class="relative h-72 sm:h-96 rounded-2xl overflow-hidden glass-card">
+            <img id="modal-suite-main-image" src="" alt="Suite Preview" class="w-full h-full object-cover transition-all duration-500">
+            
+            <div class="absolute top-4 right-4 flex items-center bg-slate-950/80 backdrop-blur-md p-1 rounded-full border border-white/20 text-xs">
+              <button data-lighting="day" class="suite-lighting-btn px-3 py-1 rounded-full text-xs font-semibold bg-white text-slate-900 transition-all">Alpine Day</button>
+              <button data-lighting="dusk" class="suite-lighting-btn px-3 py-1 rounded-full text-xs text-mist-400 hover:text-white transition-all">Mountain Dusk</button>
+            </div>
+
+            <div class="absolute bottom-4 left-4 font-display text-xl sm:text-2xl text-white font-medium bg-slate-950/85 px-4 py-1.5 rounded-xl border border-white/15" id="modal-suite-price">
+              $0 / night
+            </div>
+          </div>
+
+          <!-- Thumbnail Gallery Selector -->
+          <div id="modal-gallery-thumbs" class="grid grid-cols-4 gap-3"></div>
+        </div>
+
+        <!-- View 2: CAD Blueprint Schematic -->
+        <div id="modal-view-blueprint" class="hidden space-y-4">
+          <div id="modal-blueprint-details"></div>
+        </div>
+
+        <!-- Specs Bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 p-4 rounded-xl bg-slate-950/60 border border-white/10 text-xs">
+          <div>
+            <span class="text-[10px] uppercase tracking-widest text-mist-400 block">Residence Area</span>
+            <span id="modal-suite-size" class="text-white font-medium">1,250 sq.ft</span>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase tracking-widest text-mist-400 block">Max Guests</span>
+            <span id="modal-suite-capacity" class="text-white font-medium">2 Guests</span>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <span class="text-[10px] uppercase tracking-widest text-mist-400 block">Service Protocol</span>
+            <span class="text-emerald-400 font-medium">Dedicated Sherpa Butler</span>
+          </div>
+        </div>
+
+        <div>
+          <p id="modal-suite-tagline" class="text-mist-300 text-sm font-light leading-relaxed italic mb-4"></p>
+          <h4 class="text-xs uppercase tracking-widest text-white font-medium mb-3">Architectural Highlights & In-Room Amenities</h4>
+          <ul id="modal-suite-features" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></ul>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-white/10">
+          <span class="text-[10px] uppercase tracking-widest text-mist-400 block mb-1">Inclusions & Diplomatic Privileges</span>
+          <p id="modal-suite-inclusions" class="text-xs text-mist-300 font-light leading-relaxed"></p>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 sm:p-6 bg-slate-950/90 border-t border-white/10 flex items-center justify-between">
+        <button onclick="closeSuiteModal()" class="text-xs uppercase tracking-widest text-mist-400 hover:text-white">
+          Back to Retreat
+        </button>
+        <button id="modal-suite-book-trigger" class="btn-silver px-8 py-3 rounded-full text-xs uppercase tracking-widest font-semibold">
+          Select & Book This Residence
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       MODAL 2: INTERACTIVE RESERVATION FORM
+       ======================================================================= -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md">
+    <div class="glass-panel w-full max-w-2xl rounded-3xl overflow-hidden border border-white/20 max-h-[92vh] flex flex-col shadow-2xl">
+      
+      <!-- Modal Header -->
+      <div class="p-6 sm:p-8 border-b border-white/10 flex items-center justify-between bg-slate-950/60">
+        <div>
+          <span class="text-[10px] uppercase tracking-[0.25em] text-mist-400 font-medium block">Himalayan Cloud Sanctuary</span>
+          <h3 class="font-display text-3xl text-white font-light">Reserve Your Residence</h3>
+        </div>
+        <button onclick="closeBookingModal()" class="w-8 h-8 rounded-full bg-slate-800 text-mist-300 flex items-center justify-center hover:text-white hover:bg-slate-700 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <!-- Modal Form Body -->
+      <form onsubmit="handleReservationSubmit(event)" class="p-6 sm:p-8 overflow-y-auto space-y-6">
+        
+        <!-- Residence Selection -->
+        <div>
+          <label class="block text-xs uppercase tracking-widest text-mist-300 font-medium mb-2">Residence Selection</label>
+          <select id="booking-suite-select" class="w-full bg-slate-950 p-3.5 rounded-xl border border-white/15 text-white text-xs focus:border-white focus:outline-none">
+            <option value="chalet">The Cloudline Chalet (Base $850 / night)</option>
+            <option value="villa">The Celestial Glass Villa (Base $1,450 / night)</option>
+            <option value="penthouse">The Sanctuary Summit Penthouse (Base $2,200 / night)</option>
+          </select>
+        </div>
+
+        <!-- Date Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-mist-300 font-medium mb-2">Arrival Date</label>
+            <input type="date" id="booking-checkin" required class="w-full bg-slate-950 p-3.5 rounded-xl border border-white/15 text-white text-xs focus:border-white focus:outline-none cursor-pointer">
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-mist-300 font-medium mb-2">Departure Date</label>
+            <input type="date" id="booking-checkout" required class="w-full bg-slate-950 p-3.5 rounded-xl border border-white/15 text-white text-xs focus:border-white focus:outline-none cursor-pointer">
+          </div>
+        </div>
+
+        <!-- Guests and Currency Summary -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-mist-300 font-medium mb-2">Guests Count</label>
+            <select id="booking-guests" class="w-full bg-slate-950 p-3.5 rounded-xl border border-white/15 text-white text-xs focus:border-white focus:outline-none">
+              <option value="1">1 Guest (Solo Sanctuary)</option>
+              <option value="2" selected>2 Guests (Double Occupancy)</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="6">Up to 6 Guests (Penthouse Only)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-mist-300 font-medium mb-2">Billing Currency</label>
+            <div class="w-full bg-slate-950 p-3.5 rounded-xl border border-white/15 text-mist-300 text-xs flex items-center justify-between">
+              <span>Selected Currency:</span>
+              <span class="currency-label font-bold text-white">USD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guest Details -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-mist-300 font-medium mb-2">Full Name</label>
+            <input type="text" id="booking-name" required placeholder="e.g. Lord Alistair Vance" class="w-full bg-slate-950 p-3.5 rounded-xl border border-white/15 text-white text-xs placeholder:text-mist-500 focus:border-white focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-widest text-mist-300 font-medium mb-2">Diplomatic / Private Email</label>
+            <input type="email" id="booking-email" required placeholder="vance@concierge-client.com" class="w-full bg-slate-950 p-3.5 rounded-xl border border-white/15 text-white text-xs placeholder:text-mist-500 focus:border-white focus:outline-none">
+          </div>
+        </div>
+
+        <!-- Special Requests -->
+        <div>
+          <label class="block text-xs uppercase tracking-widest text-mist-300 font-medium mb-2">Bespoke Concierge Requests & Itinerary Notes</label>
+          <textarea id="booking-requests" rows="3" placeholder="e.g. Helicopter pick-up from Kathmandu, dietary preferences, wine cellar pre-stocking..." class="w-full bg-slate-950 p-3.5 rounded-xl border border-white/15 text-white text-xs placeholder:text-mist-500 focus:border-white focus:outline-none"></textarea>
+        </div>
+
+        <!-- Real-Time Estimated Calculation Box -->
+        <div class="p-5 rounded-2xl bg-slate-950/80 border border-white/15 space-y-2">
+          <div class="flex justify-between text-xs text-mist-400">
+            <span>Duration:</span>
+            <span id="booking-summary-nights" class="text-white font-medium">4 Nights</span>
+          </div>
+          <div class="flex justify-between text-xs text-mist-400">
+            <span>Estimated Nightly Rate:</span>
+            <span id="booking-summary-rate" class="text-white font-medium">$850 / night</span>
+          </div>
+          <div class="flex justify-between text-base font-display text-white pt-2 border-t border-white/10">
+            <span>Total Estimated Stay:</span>
+            <span id="booking-summary-total" class="font-bold text-white">$3,400</span>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-2">
+          <button type="submit" class="w-full btn-silver py-4 rounded-xl text-xs uppercase tracking-widest font-semibold flex items-center justify-center space-x-2">
+            <span>Confirm & Transmit Reservation</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          </button>
+          <p class="text-[10px] text-center text-mist-500 uppercase tracking-widest mt-2">
+            Non-binding VIP inquiry · Our diplomatic concierge will reach out within 2 hours
+          </p>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       TOAST / NOTIFICATION: VIP CONFIRMATION MODAL
+       ======================================================================= -->
+  <div id="confirmation-toast" class="fixed bottom-8 right-4 sm:right-8 z-50 max-w-md w-full hidden transition-all duration-300 opacity-0 translate-y-8">
+    <div class="glass-panel p-6 rounded-2xl border border-white/20 shadow-2xl relative bg-slate-950/95">
+      <button onclick="closeConfirmationToast()" class="absolute top-4 right-4 text-mist-400 hover:text-white">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div class="flex items-start space-x-4">
+        <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <div class="space-y-1">
+          <span class="text-[10px] uppercase tracking-widest text-emerald-400 font-semibold block">VIP Reservation Received</span>
+          <h4 class="font-display text-lg text-white">Salutations, <span id="toast-guest-name">Honored Guest</span></h4>
+          <p class="text-xs text-mist-300 font-light leading-relaxed">
+            Your inquiry for <strong id="toast-suite-name" class="text-white font-medium">The Cloudline Chalet</strong> has been allocated under Reference Code: <span id="toast-ref-code" class="text-white font-mono font-medium">SWG-982410</span>.
+          </p>
+          <div class="pt-2 text-[11px] text-mist-400 flex justify-between">
+            <span>Estimated Value: <strong id="toast-total-amount" class="text-white font-medium">$3,400</strong></span>
+            <span class="text-emerald-400 font-medium">Sherpa Concierge Alerted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* ==========================================================================
+   SWARG — Himalayan Cloud Retreat (Medium Tier)
+   Architectural Studio Edition inspired by FORMA
+   Minimalist Luxury: Warm Concrete, Himalayan Slate, Pure White, Refined Glass
+   ========================================================================== */
+
+:root {
+  --color-slate-black: #080b11;
+  --color-slate-dark: #0f141f;
+  --color-slate-surface: #171d2b;
+  --color-mist-silver: #94a3b8;
+  --color-mist-light: #cbd5e1;
+  --color-snow-white: #ffffff;
+  --color-snow-subtle: #f8fafc;
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+  --color-glass-bg: rgba(11, 15, 24, 0.75);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-slate-black);
+  color: var(--color-snow-white);
+  overflow-x: hidden;
+}
+
+/* Typography Utilities */
+.font-display {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.tracking-ultra {
+  letter-spacing: 0.3em;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-glass-border);
+}
+
+.glass-card {
+  background: rgba(18, 23, 34, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 25px -5px rgba(255, 255, 255, 0.08);
+}
+
+/* Buttons */
+.btn-silver {
+  background: #ffffff;
+  color: #080b11;
+  transition: all 0.25s ease;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.btn-silver:hover {
+  background: #e2e8f0;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-ghost-silver {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all 0.25s ease;
+  letter-spacing: 0.12em;
+}
+
+.btn-ghost-silver:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+/* FORMA-Style Room Walkthrough Carousel */
+.walkthrough-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(1.02);
+}
+
+.walkthrough-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+/* Horizontal Progress Indicator */
+.progress-bar-track {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: #ffffff;
+  width: 0%;
+  transition: width 0.4s ease-out;
+}
+
+/* Room Pill Switcher */
+.room-nav-pill {
+  transition: all 0.25s ease;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid transparent;
+}
+
+.room-nav-pill:hover {
+  color: #ffffff;
+}
+
+.room-nav-pill.active {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080b11;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2638;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Image Zoom Effect */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Blueprint Grid */
+.bg-blueprint {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Curation Cards */
+.curate-card {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.curate-card.selected {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
